@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func computeGrade(gotPoints, maxPoints float64) (float64, error) {
+func computeGrade(gotPoints, maxPoints float32) (float32, error) {
 	if gotPoints < 0 || maxPoints <= 0 || gotPoints > maxPoints {
 		return 0, errors.New("invalid points: gotPoints must be between 0 and maxPoints, and maxPoints must be positive")
 	}
@@ -16,8 +16,8 @@ func computeGrade(gotPoints, maxPoints float64) (float64, error) {
 
 func main() {
 	grades := []struct {
-		gotPoints float64
-		maxPoints float64
+		gotPoints float32
+		maxPoints float32
 	}{
 		{17.5, 28.0}, // 4.1
 		{25.0, 30.0}, // 5.2
