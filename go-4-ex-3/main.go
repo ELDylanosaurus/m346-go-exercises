@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func computeQuadraticFormula(a, b, c float64) ([]float64, error) {
+func computeQuadraticFormula(a, b, c float32) ([]float32, error) {
 	if a == 0 {
 		return nil, fmt.Errorf("a must not be zero")
 	}
@@ -16,10 +16,10 @@ func computeQuadraticFormula(a, b, c float64) ([]float64, error) {
 	case discriminant > 0:
 		x1 := (-b + math.Sqrt(discriminant)) / (2 * a)
 		x2 := (-b - math.Sqrt(discriminant)) / (2 * a)
-		return []float64{x1, x2}, nil
+		return []float32{x1, x2}, nil
 	case discriminant == 0:
 		x := -b / (2 * a)
-		return []float64{x}, nil
+		return []float32{x}, nil
 	default:
 		return nil, fmt.Errorf("no real solutions")
 	}
@@ -27,7 +27,7 @@ func computeQuadraticFormula(a, b, c float64) ([]float64, error) {
 
 func main() {
 	testCases := []struct {
-		a, b, c float64
+		a, b, c float32
 	}{
 		{3, 4, 1}, // L = {-0,3333333; -1}
 		{2, 4, 2}, // L = {-1}
