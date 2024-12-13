@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func convertCelsiusToFahrenheit(celsius float64) float64 {
+func convertCelsiusToFahrenheit(celsius float32) float32 {
 	return celsius*9/5 + 32
 }
 
-func convertFahrenheitToCelsius(fahrenheit float64) float64 {
+func convertFahrenheitToCelsius(fahrenheit float32) float32 {
 	return (fahrenheit - 32) * 5 / 9
 }
 
