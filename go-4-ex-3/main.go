@@ -7,7 +7,7 @@ import (
 
 func computeQuadraticFormula(a, b, c float32) ([]float32, error) {
 	if a == 0 {
-		return nil, fmt.Errorf("a must not be zero")
+		return nil, fmt.Errorf("a cant be zero")
 	}
 
 	discriminant := math.Pow(b, 2) - 4*a*c
@@ -21,7 +21,7 @@ func computeQuadraticFormula(a, b, c float32) ([]float32, error) {
 		x := -b / (2 * a)
 		return []float32{x}, nil
 	default:
-		return nil, fmt.Errorf("no real solutions")
+		return nil, fmt.Errorf("no solutions")
 	}
 }
 
